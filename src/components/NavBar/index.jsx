@@ -8,6 +8,7 @@ const NavBar = () => {
 
     function logout(){
         navigate("/login")
+        localStorage.clear()
     }
 
     return (
