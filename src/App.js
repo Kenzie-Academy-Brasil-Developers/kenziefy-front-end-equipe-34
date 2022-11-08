@@ -1,13 +1,10 @@
 import React from "react";
-import NavBar from "./components/NavBar";
-import Login from "./pages/Login";
+import RoutesMain from "./routes";
 
 function App() {
   return (
     <div className="App">
-      {/* <NavBar /> */}
-
-      {/* <Login /> */}
+      <RoutesMain />
     </div>
   );
 }
