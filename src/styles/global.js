@@ -58,6 +58,13 @@ html {
   scroll-behavior: smooth;
 }
 
+.App {
+  min-width: 100vw;
+  min-height: 100vh;
+
+  background-color: var(--grey-3);
+}
+
 :root{
     --grey-0:#FFFFFF;
     --blue-0:#8DBDFF;

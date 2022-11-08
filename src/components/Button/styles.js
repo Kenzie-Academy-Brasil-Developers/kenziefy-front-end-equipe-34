@@ -30,6 +30,8 @@ const Button = styled.button`
         if(color === "b1") return "var(--blue-1)"
         if(color === "b2") return "var(--blue-2)"
         if(color === "b3") return "var(--blue-3)"
+
+        if(color === "transparent") return "transparent"
     }};
 `
 

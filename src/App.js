@@ -1,12 +1,10 @@
 import React from "react"
-import Header from "./components/Header";
-import NavBar from "./components/NavBar";
+import Dashboard from "./pages/Dashboard";
 
 function App() {
   return (
     <div className="App">
-      <NavBar />
-      <Header name={"Wilson"}/>
+      <Dashboard />
     </div>
   );
 }
