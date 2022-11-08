@@ -14,7 +14,7 @@ export const LoginContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 20%;
+    width: 200px;
   }
 `;
 
@@ -80,10 +80,11 @@ export const LoginForm = styled.form`
 
   span {
     font-family: "Hind";
-    color: darkred;
+    color: red;
     margin: 1px;
-    font-size: 12px;
-    font-weight: medium;
+    font-size: 16px;
+    align-items: center;
+    font-weight: bolder;
   }
 
   .btnSingIn {
@@ -99,6 +100,7 @@ export const LoginForm = styled.form`
     background-color: #0080ff;
     color: rgba(255, 255, 255, 1);
     font-weight: bold;
+    font-size: 14px;
   }
 
   .btnSingIn:hover {
@@ -120,13 +122,13 @@ export const LoginForm = styled.form`
     flex-direction: column;
     align-items: center;
     font-family: "Hind";
-    font-size: 14px;
+    font-size: 16px;
   }
 
   strong {
     margin-top: 5px;
     font-family: "Hind";
-    font-size: 14px;
+    font-size: 16px;
     color: #0080ff;
   }
 

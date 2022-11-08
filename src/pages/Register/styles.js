@@ -2,12 +2,42 @@ import styled from "styled-components";
 
 export const RegisterContainer = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-image: url(${BackGroundRegister});
-  background-size: cover;
-  background-position: center;
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: #141414;
+
+  img {
+    width: 200px;
+  }
+
+  div{
+    display: flex;
+    flex-direction: column;
+  }
+
+  p {
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Hind";
+    font-size: 16px;
+  }
+
+  strong {
+    margin-top: 5px;
+    font-family: "Hind";
+    font-size: 16px;
+    color: #0080ff;
+  }
+
+  strong:hover {
+    color: #8dbdff;
+  }
 `;
 
 export const RegisterForm = styled.form`
@@ -15,17 +45,17 @@ export const RegisterForm = styled.form`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgba(255, 255, 255, 0.4);
+  /* background-color: rgba(255, 255, 255, 0.4); */
   padding: 20px;
   border-radius: 20px;
   width: 310px;
 
   h2 {
-    font-family: "Roboto";
+    font-family: "Hind";
     display: flex;
     justify-content: center;
     padding: 20px;
-    color: rgba(0, 0, 0, 1);
+    color: white;
     font-size: 30px;
     font-weight: bold;
   }
@@ -59,7 +89,7 @@ export const RegisterForm = styled.form`
   }
 
   input {
-    font-family: "Roboto";
+    font-family: "Hind";
     width: 90%;
     border: none;
     border-radius: 10px;
@@ -71,16 +101,17 @@ export const RegisterForm = styled.form`
   }
 
   span {
-    font-family: "Roboto";
-    color: darkred;
+    font-family: "Hind";
+    color: red;
     margin: 1px;
-    font-size: 12px;
-    font-weight: medium;
+    font-size: 16px;
+    align-items: center;
+    font-weight: bolder;
   }
 
   .btnRegister {
     margin: 10px;
-    font-family: "Roboto";
+    font-family: "Hind";
     display: flex;
     justify-content: center;
     align-items: center;
@@ -89,27 +120,29 @@ export const RegisterForm = styled.form`
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    background-color: rgba(250, 123, 18, 1);
+    background-color: #0080ff;
     color: rgba(255, 255, 255, 1);
     font-weight: bold;
+    font-size: 16px;
   }
 
   .btnRegister:hover {
-    background-color: #ffa75e;
+    background-color: #8dbdff;
   }
 
   .btnCloseRegister {
-    color: rgba(250, 123, 18, 1);
-    font-family: "Roboto";
+    color: #FFFFFF;
+    font-family: "Hind";
     display: flex;
     margin-left: 290px;
     border: none;
-    background-color: transparent;
+    background-color: white;
+    color: white;
     font-size: larger;
     font-weight: bolder;
     cursor: pointer;
   }
   .btnCloseRegister:hover {
-    color: #ffa75e;
+    color: #8dbdff;
   }
 `;
