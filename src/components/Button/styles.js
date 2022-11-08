@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 const Button = styled.button`
     display: flex;
@@ -6,7 +6,7 @@ const Button = styled.button`
     justify-content: center;
 
     cursor: pointer;
-    padding: 0.5rem 1.5rem;
+    padding: ${({padding}) => padding === "none" ? "initial" : "0.5rem 1.5rem"};
     color: var(--grey-0);
 
     font-weight: 700;
@@ -30,6 +30,8 @@ const Button = styled.button`
         if(color === "b1") return "var(--blue-1)"
         if(color === "b2") return "var(--blue-2)"
         if(color === "b3") return "var(--blue-3)"
+
+        if(color === "transparent") return "transparent"
     }};
 `
 

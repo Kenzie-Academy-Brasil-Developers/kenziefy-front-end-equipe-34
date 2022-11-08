@@ -20,6 +20,8 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
   box-sizing: border-box;
+  color: white;
+  font-family: 'Inter', sans-serif;
 }
 
 article, aside, details, figcaption, figure, 
@@ -56,6 +58,13 @@ html {
   scroll-behavior: smooth;
 }
 
+.App {
+  min-width: 100vw;
+  min-height: 100vh;
+
+  background-color: var(--grey-3);
+}
+
 :root{
     --grey-0:#FFFFFF;
     --blue-0:#8DBDFF;
@@ -75,6 +84,12 @@ html {
     --headline-bold: bold 12px;
     --headline-italic: italic 12px;
     --border-radius: 4px;
-}`;
+}
+  h1 {
+    font-weight: 700;
+    font-size: 1rem;
+  }
+
+`;
 
 export default GlobalStyle;
