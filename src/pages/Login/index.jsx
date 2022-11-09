@@ -24,7 +24,7 @@ function Login() {
       <img src={Logo} alt="KenzieFy" />
       <div>
         <LoginForm onSubmit={handleSubmit(loginUser)}>
-          <h2>Login</h2>
+          <h2>Login</h2>  
           <input
             type="text"
             placeholder="E-mail"
