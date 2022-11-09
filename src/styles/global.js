@@ -90,6 +90,12 @@ html {
     font-size: 1rem;
   }
 
+  span {
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--grey-1);
+  }
+
 `;
 
 export default GlobalStyle;
