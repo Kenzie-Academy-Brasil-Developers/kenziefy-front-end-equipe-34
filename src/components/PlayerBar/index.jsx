@@ -13,7 +13,10 @@ const PlayerBar = ({nextMusicFnc, backMusicFnc}) => {
             <Button className="left"><SkipPreviousOutlinedIcon color="primary" onClick={() => nextMusicFnc()} /></Button>
             <Button className="right"><SkipNextOutlinedIcon color="primary" onClick={() => backMusicFnc()}/></Button>
             
-            <iframe title="deezer-widget" src={`https://widget.deezer.com/widget/dark/track/${playingMusicId}`} width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>
+            {
+                playingMusicId &&
+                <iframe title="deezer-widget" src={`https://widget.deezer.com/widget/dark/track/${playingMusicId}`} width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>
+            }
         </PlayerBarContainer>
     )
 }

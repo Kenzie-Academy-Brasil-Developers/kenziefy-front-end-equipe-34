@@ -16,23 +16,24 @@ const ContextsProvider = ({ children }) => {
   const [user, setUser] = useState(null);
 
   async function loginUser(data) {
+
     const response = await api.post("/login", data).catch(function (error) {
       fail();
     });
-    const { accessToken, user } = response.data;
+    const { token } = response.data;
+  
+    api.defaults.headers.authorization = `Bearer ${token}`;
 
-    setUser(user);
-    const idUser = user.id;
-    api.defaults.headers.authorization = `Bearer ${accessToken}`;
+    const toNavigate = location.state?.from?.pathname || `/dashboard/`;
 
-    const toNavigate = location.state?.from?.pathname || `/dashboard/${idUser}`;
+    if (token !== null) {
+      localStorage.setItem("@KENZIEFY:token", token);
 
-    if (accessToken !== null) {
-      localStorage.setItem("@KENZIEFY:token", accessToken);
-      if (localStorage.getItem("@KENZIEFY:token") !== null) {
-        navigate(toNavigate, { replace: true });
-        wellcome();
-      }
+      console.log(token)
+
+      navigate(toNavigate, { replace: true });
+      wellcome();
+      
     }
   }
   function logOut() {

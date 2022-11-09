@@ -5,18 +5,22 @@ import MenuItem from '@mui/material/MenuItem';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 
 const options = [
-  'Adicionar a uma playlist'
+  'Adicionar a uma playlist',
 ];
 
 const ITEM_HEIGHT = 48;
 
-export default function LongMenu() {
+export default function LongMenu({isShown, setShowModal}) {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
-  const handleClose = () => {
+  const handleClose = (option) => {
+    if(option === 'Adicionar a uma playlist'){
+      setShowModal(true)
+    }
+
     setAnchorEl(null);
   };
 
@@ -29,6 +33,7 @@ export default function LongMenu() {
         aria-expanded={open ? 'true' : undefined}
         aria-haspopup="true"
         onClick={handleClick}
+        style={{display: isShown ? "flex" : "none" }}
       >
         <MoreVertIcon style={{ color: "var(--grey-0)"}}/>
       </IconButton>
@@ -48,7 +53,7 @@ export default function LongMenu() {
         }}
       >
         {options.map((option) => (
-          <MenuItem key={option} selected={option === 'Pyxis'} onClick={handleClose} style={{color: "var(--grey-3)"}}>
+          <MenuItem key={option} selected={option === 'Adicionar a uma playlist'} onClick={() => handleClose(option)} style={{color: "var(--grey-3)"}}>
             {option}
           </MenuItem>
         ))}

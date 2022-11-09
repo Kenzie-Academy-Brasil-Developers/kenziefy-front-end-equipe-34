@@ -3,7 +3,7 @@ import Header from "../../components/Header"
 import PlayerBar from "../../components/PlayerBar"
 import MusicList from "../../components/MusicList"
 import MusicsProvider from "../../contexts/musics"
-import { useContext } from "react"
+import Playlist from "../../components/Playlist"
 
 const Dashboard = () => {
 
@@ -14,6 +14,7 @@ const Dashboard = () => {
                 <Header name={"Wilson"} />
                 <MusicList />
                 <PlayerBar />
+                <Playlist />
             </MusicsProvider>
         </div>
     )
