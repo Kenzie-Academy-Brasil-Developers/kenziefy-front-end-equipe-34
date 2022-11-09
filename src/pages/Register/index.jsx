@@ -32,7 +32,12 @@ function Register() {
             X
           </a> */}
           <h2>Cadastre-se</h2>
-          <input type="text" placeholder="Nome" id="name" {...register("name")} />
+          <input
+            type="text"
+            placeholder="Nome"
+            id="name"
+            {...register("name")}
+          />
           {errors.name && <span>{errors.name?.message}</span>}
 
           <input
@@ -77,7 +82,7 @@ function Register() {
           />
           {errors.contact && <span>{errors.contact?.message}</span>}
           <input
-            type="text"
+            type="date"
             placeholder="Data de nascimento"
             id="birth_date"
             {...register("birth_date")}
@@ -88,7 +93,7 @@ function Register() {
             type="text"
             placeholder="Link de imagem do perfil"
             id="img"
-            {...register("img")}  
+            {...register("img")}
           />
           {errors.img && <span>{errors.img?.message}</span>}
 
@@ -97,12 +102,12 @@ function Register() {
           </button>
         </RegisterForm>
       </div>
-        <p>
-          Já possui cadastro? 
-          <a href="/login" className="btnCloseRegister">
-            <strong>Voltar para login</strong>
-          </a>
-        </p>
+      <p>
+        Já possui cadastro?
+        <a href="/login" className="btnCloseRegister">
+          <strong>Voltar para login</strong>
+        </a>
+      </p>
     </RegisterContainer>
   );
 }
