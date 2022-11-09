@@ -3,9 +3,12 @@ import { DivImage, DivPlay, MusicCardContainer } from "./styles"
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import LongMenu from "../LongMenu";
 import { MusicsContext } from "../../contexts/musics";
+import ModalAdd from "../ModalAdd";
 
 const MusicCard = ({music}) => {
     const [isShown, setIsShown] = useState(false)
+    const [showModal, setShowModal] = useState(false)
+
 
     const {setPlayingMusicId} = useContext(MusicsContext)
 
@@ -24,8 +27,9 @@ const MusicCard = ({music}) => {
                     <h1>{music.title_short}</h1>
                     <span>{music.artist.name}</span>
                 </figcaption>
-                {isShown && <LongMenu/>}
-            </figure>   
+                <LongMenu isShown={isShown} setShowModal={setShowModal}/>
+            </figure>
+            <ModalAdd showModal={showModal} setShowModal={setShowModal} song_name={music.title} />
         </MusicCardContainer>
     )
 }

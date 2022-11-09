@@ -59,9 +59,11 @@ const MusicContainer = styled.ul`
     }
 
     margin-top: 1rem;
+    margin-bottom: 1rem;
 
     width: 100%;
     max-height: 300px;
+    min-height: 289px;
 `
 
 
