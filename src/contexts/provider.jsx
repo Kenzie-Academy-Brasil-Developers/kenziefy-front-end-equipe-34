@@ -28,8 +28,8 @@ const ContextsProvider = ({ children }) => {
     const toNavigate = location.state?.from?.pathname || `/dashboard/${idUser}`;
 
     if (accessToken !== null) {
-      localStorage.setItem("@nowaiting:token", accessToken);
-      if (localStorage.getItem("@nowaiting:token") !== null) {
+      localStorage.setItem("@KENZIEFY:token", accessToken);
+      if (localStorage.getItem("@KENZIEFY:token") !== null) {
         navigate(toNavigate, { replace: true });
         wellcome();
       }
